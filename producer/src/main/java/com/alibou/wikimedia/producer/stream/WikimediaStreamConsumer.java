@@ -20,10 +20,13 @@ public class WikimediaStreamConsumer {
     }
 
     public void consumeStreamAndPublish() {
+
         webClient.get()
                 .uri("/stream/recentchange")
                 .retrieve()
-                .bodyToFlux(String.class)
+                .bodyToFlux(String.class) //consume and produce string
                 .subscribe(producer::sendMessage);
+
     }
+
 }

@@ -11,7 +11,7 @@ import static java.lang.String.format;
 @Slf4j
 public class KafkaConsumer {
 
-    // @KafkaListener(topics = "alibou", groupId = "myGroup")
+     //@KafkaListener(topics = "alibou", groupId = "myGroup")   //lezem we7ed barka
     public void consumeMsg(String msg) {
         log.info(format("Consuming the message from alibou Topic:: %s", msg));
     }
